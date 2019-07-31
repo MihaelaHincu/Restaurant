@@ -1,0 +1,44 @@
+.carousel-caption {
+    margin-bottom: 20%;
+    font-family: 'Italianno', cursive;
+    
+    text-shadow: 2px 2px black;
+}
+.carousel-caption h3 {
+    font-size: 60px;
+}
+.carousel-caption button {
+    font-size:30px;
+    width: 120px;
+    margin-left:10px;
+}
+.carousel-caption a:hover {
+    text-decoration: none;
+}
+body {
+    font-family: 'Muli'
+}
+
+.icons {
+    height: 25px;
+}
+
+.navbar {
+    background: none!important;
+}
+
+a.bgcolor:hover {
+    background-color: #f4e1d2;
+}
+
+.margin-top {
+    margin-top:50px;
+}
+
+.information-wrapper {
+    margin-left: 20%;
+}
+.information-wrapper p {
+    font-size:20px;
+    width: 30%;
+}
