@@ -1,9 +1,14 @@
 $('.carousel-fade').carousel({
-    interval: 2500
-  })
+  interval: 2500
+})
 
 
+function removeHidden() {
 
-function removeHidden {
-  let map = document.querySelector(hidden);
+  var x = document.getElementById("hidden");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }

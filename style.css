@@ -32,13 +32,12 @@ body, html {
 }
 
 .navbar {
-   
+   background-color: rgba(31, 32, 32, 0.637);
     border-radius: 2px;
     box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.4);
     padding: 0 10px;
     position: absolute;
     width:100%;
-    
     top: 0;
     left: 0;
     z-index: 99999;
@@ -66,7 +65,8 @@ a.dropdown-item {
     padding:70px;
     margin-left: 15%;
     margin-right: 15%;
-    background-color: rgba(126, 143, 160, 0.623);
+    background-image: url('menu/extra_clean_paper.png');
+    border-radius:12px;
 }
 
 img {
@@ -84,13 +84,13 @@ img {
 }
 .alignbox-big {
     display: inline-block;
-    width: 44%;
+    width: 48%;
     margin-left: 2%;
     border: solid black;
 }
 .alignbox-big2 {
     display: inline-block;
-    width: 50%;
+    width: 40%;
     padding:100px;
     
     margin-left: 2%;
@@ -100,7 +100,7 @@ img {
 
 .alignbox-big2 p {
 
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 0.05em;
     text-align: center;
     font-family: 'Anton', sans-serif;
@@ -180,7 +180,7 @@ h4:after {
     right: 0;
 }
 
-.hidden {
+#hidden {
     display: none;
 }
 

@@ -25,7 +25,7 @@
 <!-- loader end -->
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar">
     <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
             viewBox="0 0 172 172" style=" fill:#000000;">
             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -87,7 +87,7 @@
                     Restaurant
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item bgcolor" href="#">Reservation <svg xmlns="http://www.w3.org/2000/svg"
+                    <a class="dropdown-item bgcolor" href="#">Book a table<svg xmlns="http://www.w3.org/2000/svg"
                             x="0px" y="0px" width="50" height="30" viewBox="0 0 172 172" style=" fill:#000000;">
                             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
@@ -142,7 +142,7 @@
             <div class="view">
                 <!--Video source-->
                 <video class="video-fluid" autoplay loop muted>
-                    <source src="HotelBuffet.mp4" type="video/mp4" />
+                    <source src="Hotel Food And Interior.mp4" type="video/mp4" />
                 </video>
 
             </div>
@@ -204,8 +204,8 @@
             quibusdam nulla ut eius! Sint omnis vero ut ullam laboriosam tenetur magnam. Culpa unde fugit doloribus
             obcaecati itaque necessitatibus sint sapiente asperiores nemo, at esse facere iste deleniti consequuntur
             maxime, rerum fugiat enim officiis a! </p>
-        <button class="button"><span>Location </span></button>
-        <iframe class="hidden"
+        <button class="button" onclick="removeHidden();"><span>Location </span></button>
+        <iframe id="hidden"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5700.465347363124!2d26.105064!3d44.407871!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c229d7528e44f8e!2sYouth+Park!5e0!3m2!1sen!2sro!4v1564749878658!5m2!1sen!2sro"
             width="100%" height="400" frameborder="0" style="border:2px black" allowfullscreen></iframe>
     </div>
@@ -217,7 +217,7 @@
 
         <img src="flamenco-downloading-1.png" class="alignbox-big" alt="">
         <div class="alignbox-big2">
-            <p>We cooked your desired recipe, make a reservation now!</p>
+            <p>We cooked your desired recipe, book a table now!</p>
             <button>Menu</button>
             <button>Reservation</button>
         </div>
