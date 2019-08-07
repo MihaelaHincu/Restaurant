@@ -1,72 +1,84 @@
 {
     "dishes": [
         {
+            "category": "fish",
             "name": "Lobster Tails and Sesame Bok Choy",
             "price": "300",
             "ingredients": "shiitake mushroom, sesame oil, 2 lobster tails, hot cooked brown basmati or jasmine rice, 2 heads baby bok choy, white miso",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
-            "name": "Coffee-Rubbed Steak With Brussels Sprouts Salad",
+            "category": "meat",
+            "name": "Coffee-Rubbed Steak With Brussels Salad",
             "price": "300",
             "ingredients": "ground coffee beans, shredded Brussels sprouts, blue cheese, black pepper, 500g hanger steak, olive oil, honey, chopped toasted pecans, ",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "meat",
             "name": "Lightened-Up Scotch Eggs",
             "price": "300",
             "ingredients": "ground turkey, fresh sage, garlic clove, 4 hard-cooked large eggs, canola oil",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "garnish",
             "name": "Romesco Sauce",
             "price": "300",
             "ingredients": "4 garlic cloves, red bell peppers, jalapeño or fresno chile, olive oil, tomato, red wine",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "desert",
             "name": "Cranberry and Dark Cherry Clafoutis",
             "price": "300",
             "ingredients": "almond extract, cranberries, cinnamon, cherries, reduced-fat milk, sugar",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "desert",
             "name": "Pomegranate-Poached Pears",
             "price": "300",
             "ingredients": "pears, vanilla extract, Pinot Noir, maple syrup, pomegranate juice,reduced-fat Greek yogurt",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
-            "name": "Barbecued oysters with garlic, paprika & Parmesan butter",
+            "category": "fish",
+            "name": "Barbecued oysters with garlic",
             "price": "300",
             "ingredients": "onion, lemon juice, parsley leaves, garlic, 12 rock oysters",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "meat",
             "name": "Minted melon, tomato & prosciutto salad",
             "price": "300",
             "ingredients": "heirloom tomatoes, Charentais melon, prosciutto, red wine,  mint, crusty bread",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "meat",
             "name": "John's jambalaya",
             "price": "300",
             "ingredients": "chicken thighs fillets, sesame oil, garlic, cherry tomatoes, fresh thyme leaves, oregano",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "meat",
             "name": "Peppered fillet steak with parsley potatoes",
             "price": "300",
             "ingredients": "3 large red-skinned potatoes, sesame oil, garlic, parsley, watercress salad, 2 beef fillet steaks",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "fish",
             "name": "Baked sea bass with fennel",
             "price": "300",
             "ingredients": "2 sea bass, olive oil, basil leaves, black olives, lemon slices, fennel",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
+            "category": "fish",
             "name": "Smoked salmon with prawns",
             "price": "300",
             "ingredients": "4 slices smoked salmon, olive oil, 10 large prawns, lime juice, salad leaf, root ginger",
@@ -78,61 +90,61 @@
             "name": "Wine I",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine II",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine III",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine IV",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine V",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine VI",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine VII",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine VIII",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine IX",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         },
         {
             "name": "Wine X",
             "price": "300",
             "ingredients": "grapes",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 15%alc."
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 13%alc."
         }
     ],
     "cart": []

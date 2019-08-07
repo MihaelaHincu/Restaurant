@@ -47,11 +47,11 @@ function draw() {
     str += `
     <div class="alignbox-big ">
 
-      <div> <h5>${list[i].name} </h5></div>
+      <div class="information"> <h5>${list[i].name} </h5></div>
       <div><p>${list[i].description}</p></div>
       <div class="details">
         <div><strong> Price: ${list[i].price} lei</strong></div>
-        <div> <p><strong>Ingredients:</strong> ${list[i].ingredients} </p></div>
+       <button> See more </button>
       </div>
     </div>
   `;
