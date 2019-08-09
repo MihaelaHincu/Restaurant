@@ -24,7 +24,7 @@
 
 <!-- loader end -->
 
-<body onload="getList()">
+<body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                 viewBox="0 0 172 172" style=" fill:#000000;">
@@ -133,32 +133,58 @@
         </div>
     </nav>
 
-    <div class="hero-image">
-        <div class="hero-text">
-            <h4>Menu</h4>
-            <p>We cherish fresh ingredients, we cook with pure passion.</p>
-            <button class="tableBtn">Book a table</button>
+
+
+
+
+
+
+
+
+
+
+    <div class="main" style="margin-top:150px;">
+        <h1>Welcome Admin</h1>
+        <button>Menu</button>
+        <button>Reservations</button>
+
+
+        <div id="reserveContainer" class="container top-bottom ">
+            <table id="products" border="1">
+                <thead>
+                    <tr>
+                        <th style="width:20%; text-align: center ">Image</th>
+                        <th style="width:20%; text-align: center">Name</th>
+                        <th style="width:20%; text-align: center">Ingredients</th>
+                        <th style="width:20%; text-align: center">Description</th>
+                        <th style="width:20%; text-align: center">Price</th>
+                        <th style="width:60px; text-align: center">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <table id="products" border="1">
+                <thead>
+                    <tr>
+                        <th style="width:10%; text-align: center">Date</th>
+                        <th style="width:10%; text-align: center">Name</th>
+                        <th style="width:20%; text-align: center">Contact</th>
+                        <th style="width:20%; text-align: center">Guests</th>
+                        <th style="width:10%; text-align: center">Description</th>
+                        <th style="width:60px; text-align: center">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
     </div>
 
 
-
-
-
-
-
-
-
-    <div id="sortingBtns">
-        
-        <button class="btn" onclick="filterSelection('meat')">Meat</button>
-        <button class="btn" onclick="filterSelection('pasta')">Pasta</button>
-        <button class="btn" onclick="filterSelection('fish')">Fish</button>
-        <button class="btn" onclick="filterSelection('desert')">Desert</button>
-        <button class="btn" onclick="filterSelection('garnish')">Garnish</button>
-    </div>
-
-    <div id="dishesContainer" class="container top-bottom "></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

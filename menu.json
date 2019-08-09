@@ -2,42 +2,42 @@
     "dishes": [
         {
             "category": "fish",
-            "name": "Lobster Tails and Sesame Bok Choy",
+            "name": "Lobster tails and sesame Bok Choy",
             "price": "300",
             "ingredients": "shiitake mushroom, sesame oil, 2 lobster tails, hot cooked brown basmati or jasmine rice, 2 heads baby bok choy, white miso",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
             "category": "meat",
-            "name": "Coffee-Rubbed Steak With Brussels Salad",
+            "name": "Coffee-Rubbed Steak with brussels salad",
             "price": "300",
             "ingredients": "ground coffee beans, shredded Brussels sprouts, blue cheese, black pepper, 500g hanger steak, olive oil, honey, chopped toasted pecans, ",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
             "category": "meat",
-            "name": "Lightened-Up Scotch Eggs",
+            "name": "Lightened-Up scotch eggs",
             "price": "300",
             "ingredients": "ground turkey, fresh sage, garlic clove, 4 hard-cooked large eggs, canola oil",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
             "category": "garnish",
-            "name": "Romesco Sauce",
+            "name": "Romesco sauce",
             "price": "300",
             "ingredients": "4 garlic cloves, red bell peppers, jalapeño or fresno chile, olive oil, tomato, red wine",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
             "category": "desert",
-            "name": "Cranberry and Dark Cherry Clafoutis",
+            "name": "Cranberry and dark cherry clafoutis",
             "price": "300",
             "ingredients": "almond extract, cranberries, cinnamon, cherries, reduced-fat milk, sugar",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
             "category": "desert",
-            "name": "Pomegranate-Poached Pears",
+            "name": "Pomegranate-poached pears",
             "price": "300",
             "ingredients": "pears, vanilla extract, Pinot Noir, maple syrup, pomegranate juice,reduced-fat Greek yogurt",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "

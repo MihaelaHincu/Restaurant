@@ -106,9 +106,9 @@ img {
 
 
 /* wrapper */
-#dishesContainer {
+#reserveContainer {
     padding:70px;
-    background-image: url('extra_clean_paper.png');
+    background-image: url('../menu/extra_clean_paper.png');
     border-radius:12px;
 }
 /* hr */
@@ -164,7 +164,7 @@ h5 {
 /* HERO IMAGE */
 
 .hero-image {
-    background-image: linear-gradient(rgba(165, 165, 165, 0.459), rgba(0, 0, 0, 0.5)), url("photo-1495461199391-8c39ab674295.jpg");
+    background-image: linear-gradient(rgba(165, 165, 165, 0.459), rgba(0, 0, 0, 0.5)), url("background.jpg");
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
