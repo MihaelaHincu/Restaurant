@@ -1,155 +1,201 @@
-var lista = {};
+var listaDishes = {};
+var listaWines = {};
+var listaReservation = {};
 var idxEdit = null;
 
-  async function ajax(method, url, body) {
-    return new Promise(function(resolve, reject) {
-      let xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState === 4) {
-          if (this.status === 200) {
-            resolve(JSON.parse(this.responseText));
-          } else {
-            reject(new Error("Ooops! I did it again :( "));
-          }
+async function ajax(method, url, body) {
+  return new Promise(function (resolve, reject) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+          resolve(JSON.parse(this.responseText));
+        } else {
+          reject(new Error("Ooops! I did it again :( "));
         }
-      };
-      xhttp.open(method, url, true);
-      xhttp.send(body);
-    });
-  };
+      }
+    };
+    xhttp.open(method, url, true);
+    xhttp.send(body);
+  });
+};
 
 
 
-  async function getListaProduse() {
-    await ajax("GET", "https://proiectfinal-c3768.firebaseio.com/products.json")
-      .then(function(answer) {
-        lista = answer;
-        draw();
-      })
-  };
+async function getListaProduse() {
+  getListaDishes();
+  getListaWines();
+  getListaReservation();
+};
+
+// GET JSON 
+async function getListaDishes() {
+  await ajax("GET", "https://restaurant-80efb.firebaseio.com/dishes.json")
+    .then(function (answer) {
+      listaDishes = answer;
+      drawDishes();
+    })
+};
+
+async function getListaWines() {
+  await ajax("GET", "https://restaurant-80efb.firebaseio.com/wines.json")
+    .then(function (answer) {
+      listaWines = answer;
+      drawWine();
+    })
+};
 
 
-function draw() {
-    var str = "";
-    for (var i in lista) {
-        if (!lista.hasOwnProperty(i)) {
-            continue;
-        }
-        if (lista[i] === null) {
-            continue;
-        }
-        str += `
-				<tr>
-					<td class="name" style="text-align: center"><span>${lista[i].name}</span> </td>
-					<td class="brand" style="text-align: center"><span>${lista[i].brand}</span></td>
-                    <td class="image" style="text-align: center"><img id="altimg" src="${lista[i].image}" alt="No Image"></td>
-                    <td class="stock" style="text-align: center"><span>${lista[i].stock}</span></td>
-                    <td class="description" style="text-align: center"><span>${lista[i].description}</span></td>
-                    <td class="price" style="text-align: center" ><span>${lista[i].price}</span></td>
+
+async function getListaReservation() {
+  await ajax("GET", "https://restaurant-80efb.firebaseio.com/cart.json")
+    .then(function (answer) {
+      listaDishes = answer;
+      drawReservation();
+    })
+};
+
+
+
+// DRAW JSON
+function drawDishes() {
+  var str = "";
+  for (var i in listaDishes) {
+    if (!listaDishes.hasOwnProperty(i)) {
+      continue;
+    }
+    if (listaDishes[i] === null) {
+      continue;
+    }
+    str += `
+        <tr>
+        <td class="image" ><img src="${listaDishes[i].image}" alt="Food"></td>
+					<td class="category" ><span> ${listaDishes[i].category} </span></td>
+					<td class="name"><span>${listaDishes[i].name}</span></td>
+                    <td class="ingredients"><span>${listaDishes[i].ingredients}</span></td>
+                    <td class="description"><span>${listaDishes[i].description}</span></td>
+                    <td class="price" ><span>${listaDishes[i].price} lei</span></td>
 					<td style="white-space:nowrap;">
-						<div style="text-align: center" class="editBtn" onclick="edit('${i}');"></div>
-						<div style="text-align: center" class="deleteBtn" onclick="del('${i}');"></div>
+            <div style="text-align: center" class="editBtn" onclick="edit('${i}');"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="60" height="60"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498db"><path d="M130.88125,17.2c-2.93403,0 -5.86843,1.12051 -8.10729,3.35938l-13.84062,13.84063l28.66667,28.66667l13.84062,-13.84063c4.47773,-4.47773 4.47773,-11.73685 0,-16.21458l-12.45208,-12.45208c-2.23887,-2.23887 -5.17326,-3.35937 -8.10729,-3.35937zM97.46667,45.86667l-67.31068,67.31067c0,0 5.26186,-0.47147 7.22266,1.48933c1.9608,1.9608 0.34669,14.792 2.75469,17.2c2.408,2.408 15.15831,0.71299 16.98724,2.54192c1.82894,1.82893 1.70209,7.43542 1.70209,7.43542l67.31067,-67.31067zM22.93333,131.86667l-5.40859,15.31875c-0.21262,0.60453 -0.32239,1.24042 -0.32474,1.88125c0,3.16643 2.5669,5.73333 5.73333,5.73333c0.64083,-0.00235 1.27672,-0.11212 1.88125,-0.32474c0.0187,-0.00737 0.03737,-0.01483 0.05599,-0.02239l0.14557,-0.04479c0.01122,-0.00743 0.02242,-0.01489 0.03359,-0.0224l15.08359,-5.31901l-8.6,-8.6z"></path></g></g></svg></div>
+            <div class="deleteBtn" onclick="del('${i}');"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="60" height="60"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e74c3c"><path d="M40.13333,22.93333c-1.46702,0 -2.93565,0.55882 -4.05365,1.67969l-11.46667,11.46667c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l41.81302,41.81302l-41.81302,41.81302c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l11.46667,11.46667c2.24173,2.24173 5.87129,2.24173 8.10729,0l41.81302,-41.81302l41.81302,41.81302c2.236,2.24173 5.87129,2.24173 8.10729,0l11.46667,-11.46667c2.24173,-2.24173 2.24173,-5.87129 0,-8.10729l-41.81302,-41.81302l41.81302,-41.81302c2.24173,-2.236 2.24173,-5.87129 0,-8.10729l-11.46667,-11.46667c-2.24173,-2.24173 -5.87129,-2.24173 -8.10729,0l-41.81302,41.81302l-41.81302,-41.81302c-1.12087,-1.12087 -2.58663,-1.67969 -4.05365,-1.67969z"></path></g></g></svg> </div>
 					</td>
 				</tr>
 			`;
-    }
-
-    document.querySelector("table tbody").innerHTML = str;
-    showTable();
-}
-
-function showTable() {
-    idxEdit = null;
-    
-    document.querySelector("#edit").style.display = "none";
-    document.querySelector("form").style.display = "none";
-    document.querySelector("table").style.display = "";
-
-}
-
-
-async function del(idx) {
-  if(confirm(`Are you sure you want to delete ${lista[idx].name}?`) == true) {
-    await ajax("DELETE", `https://proiectfinal-c3768.firebaseio.com/products/${idx}.json`)
-    await getListaProduse();
   }
-}
-function showAddForm() {
-    document.querySelector("form").reset();
-    document.querySelector("form").style.display = "";
-    document.querySelector("table").style.display = "none";
+
+  document.querySelector("table tbody").innerHTML = str;
+
 }
 
-function showEditForm() {
-  document.querySelector("#edit").style.display = "block";
-  document.querySelector("table").style.display = "none";
-}
-async function add() {
-  event.preventDefault();
-    var newProd = {};
-    newProd.name = document.querySelector('[name="name"]').value;
-    newProd.brand = document.querySelector('[name="brand"]').value;
-    newProd.image = document.querySelector('[name="image"]').value;
-    newProd.stock = document.querySelector('[name="stock"]').value;
-    newProd.description = document.querySelector('[name="description"]').value;
-    newProd.price = document.querySelector('[name="price"]').value;
-    if (idxEdit === null) {
-        await fetch(`https://proiectfinal-c3768.firebaseio.com/products.json`,{
-            method: "POST",
-            body: JSON.stringify(newProd)
-        });
-        await getListaProduse();
-    } else {
-        await fetch(`https://proiectfinal-c3768.firebaseio.com/products/${idxEdit}.json`,{
-            method: "PUT",
-            body: JSON.stringify(newProd)
-        });
-        await getListaProduse();
-        idxEdit = null;
-        document.querySelector('[type="submit"]').value = "Add";
+
+
+function drawWine() {
+  var str = "";
+  for (var i in listaWines) {
+    if (!listaWines.hasOwnProperty(i)) {
+      continue;
     }
+    if (listaWines[i] === null) {
+      continue;
+    }
+    str += `
+      <tr>
+      <td class="category"> <span>${listaWines[i].category}</span> </td>
+        <td class="name" ><span>${listaWines[i].name}</span> </td>
+        <td class="price"><span>${listaWines[i].ingredients}</span></td>
+        <td class="ingredients" ><span>${listaWines[i].description}</span></td>
+                  <td class="description" ><span>${listaWines[i].price} lei</span></td>
+        <td style="white-space:nowrap;">
+        <div  class="editBtn" onclick="edit('${i}');"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="60" height="60"
+        viewBox="0 0 172 172"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498db"><path d="M130.88125,17.2c-2.93403,0 -5.86843,1.12051 -8.10729,3.35938l-13.84062,13.84063l28.66667,28.66667l13.84062,-13.84063c4.47773,-4.47773 4.47773,-11.73685 0,-16.21458l-12.45208,-12.45208c-2.23887,-2.23887 -5.17326,-3.35937 -8.10729,-3.35937zM97.46667,45.86667l-67.31068,67.31067c0,0 5.26186,-0.47147 7.22266,1.48933c1.9608,1.9608 0.34669,14.792 2.75469,17.2c2.408,2.408 15.15831,0.71299 16.98724,2.54192c1.82894,1.82893 1.70209,7.43542 1.70209,7.43542l67.31067,-67.31067zM22.93333,131.86667l-5.40859,15.31875c-0.21262,0.60453 -0.32239,1.24042 -0.32474,1.88125c0,3.16643 2.5669,5.73333 5.73333,5.73333c0.64083,-0.00235 1.27672,-0.11212 1.88125,-0.32474c0.0187,-0.00737 0.03737,-0.01483 0.05599,-0.02239l0.14557,-0.04479c0.01122,-0.00743 0.02242,-0.01489 0.03359,-0.0224l15.08359,-5.31901l-8.6,-8.6z"></path></g></g></svg></div>
+        <div  class="deleteBtn" onclick="del('${i}');"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="60" height="60"
+        viewBox="0 0 172 172"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e74c3c"><path d="M40.13333,22.93333c-1.46702,0 -2.93565,0.55882 -4.05365,1.67969l-11.46667,11.46667c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l41.81302,41.81302l-41.81302,41.81302c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l11.46667,11.46667c2.24173,2.24173 5.87129,2.24173 8.10729,0l41.81302,-41.81302l41.81302,41.81302c2.236,2.24173 5.87129,2.24173 8.10729,0l11.46667,-11.46667c2.24173,-2.24173 2.24173,-5.87129 0,-8.10729l-41.81302,-41.81302l41.81302,-41.81302c2.24173,-2.236 2.24173,-5.87129 0,-8.10729l-11.46667,-11.46667c-2.24173,-2.24173 -5.87129,-2.24173 -8.10729,0l-41.81302,41.81302l-41.81302,-41.81302c-1.12087,-1.12087 -2.58663,-1.67969 -4.05365,-1.67969z"></path></g></g></svg> </div>
+    
+        </td>
+      </tr>
+    `;
+  }
+
+  document.querySelector("table tbody.wine").innerHTML = str;
+
+}
+function drawReservation() {
+  var str = "";
+  for (var i in listaReservation) {
+    if (!listaReservation.hasOwnProperty(i)) {
+      continue;
+    }
+    if (listaReservation[i] === null) {
+      continue;
+    }
+    str += `
+      <tr>
+        <td class="date" ><span>${listaReservation[i].date}</span> </td>
+        <td class="name" ><span>${listaReservation[i].name}</span></td>
+        <td class="contact"><span>${listaWines[i].contact}</span></td>
+                  <td class="guests"><span>${listaReservation[i].guests}</span></td>
+                  <td class="description" ><span>${listaReservation[i].description}</span></td>
+        <td style="white-space:nowrap;">
+        <div  class="editBtn" onclick="edit('${i}');"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="60" height="60"
+        viewBox="0 0 172 172"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498db"><path d="M130.88125,17.2c-2.93403,0 -5.86843,1.12051 -8.10729,3.35938l-13.84062,13.84063l28.66667,28.66667l13.84062,-13.84063c4.47773,-4.47773 4.47773,-11.73685 0,-16.21458l-12.45208,-12.45208c-2.23887,-2.23887 -5.17326,-3.35937 -8.10729,-3.35937zM97.46667,45.86667l-67.31068,67.31067c0,0 5.26186,-0.47147 7.22266,1.48933c1.9608,1.9608 0.34669,14.792 2.75469,17.2c2.408,2.408 15.15831,0.71299 16.98724,2.54192c1.82894,1.82893 1.70209,7.43542 1.70209,7.43542l67.31067,-67.31067zM22.93333,131.86667l-5.40859,15.31875c-0.21262,0.60453 -0.32239,1.24042 -0.32474,1.88125c0,3.16643 2.5669,5.73333 5.73333,5.73333c0.64083,-0.00235 1.27672,-0.11212 1.88125,-0.32474c0.0187,-0.00737 0.03737,-0.01483 0.05599,-0.02239l0.14557,-0.04479c0.01122,-0.00743 0.02242,-0.01489 0.03359,-0.0224l15.08359,-5.31901l-8.6,-8.6z"></path></g></g></svg></div>
+        <div class="deleteBtn" onclick="del('${i}');"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="60" height="60"
+        viewBox="0 0 172 172"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#e74c3c"><path d="M40.13333,22.93333c-1.46702,0 -2.93565,0.55882 -4.05365,1.67969l-11.46667,11.46667c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l41.81302,41.81302l-41.81302,41.81302c-2.24173,2.24173 -2.24173,5.87129 0,8.10729l11.46667,11.46667c2.24173,2.24173 5.87129,2.24173 8.10729,0l41.81302,-41.81302l41.81302,41.81302c2.236,2.24173 5.87129,2.24173 8.10729,0l11.46667,-11.46667c2.24173,-2.24173 2.24173,-5.87129 0,-8.10729l-41.81302,-41.81302l41.81302,-41.81302c2.24173,-2.236 2.24173,-5.87129 0,-8.10729l-11.46667,-11.46667c-2.24173,-2.24173 -5.87129,-2.24173 -8.10729,0l-41.81302,41.81302l-41.81302,-41.81302c-1.12087,-1.12087 -2.58663,-1.67969 -4.05365,-1.67969z"></path></g></g></svg> </div>
+    
+        </td>
+      </tr>
+    `;
+  }
+
+  document.querySelector("table tbody.reservation").innerHTML = str;
+ 
 }
 
-function edit(idx) {
-  showEditForm();
-    idxEdit = idx;
-    var editProd = lista[idx];
 
-    document.querySelector('[name="nameEdit"]').value = editProd.name;
-    document.querySelector('[name="brandEdit"]').value = editProd.brand;
-    document.querySelector('[name="imageEdit"]').value =  editProd.image;
-    document.querySelector('[name="stockEdit"]').value = editProd.stock;
-    document.querySelector('[name="descriptionEdit"]').value = editProd.description;
-    document.querySelector('[name="priceEdit"]').value = editProd.price;
 
+// HIDE TABLE
+function hidden() {
+  document.querySelector("#menuContainer").style.display = "none";
+  document.querySelector("#reservationContainer").style.display = "none";
+  document.querySelector("#winesContainer").style.display = "none";
 }
 
-// Stock changed
 
-async function getCart(i, modifyProd) {
-  await ajax("GET", `https://proiectfinal-c3768.firebaseio.com/cart/${i}.json`)
-    .then(function(answer) {
-      prod = answer;
-    })
-    .then(async function() {
-      if (prod !== null) {
-        await ajax("PUT", `https://proiectfinal-c3768.firebaseio.com/cart/${idxEdit}/price.json`, JSON.stringify(modifyProd.price))
-        await ajax("PUT", `https://proiectfinal-c3768.firebaseio.com/cart/${idxEdit}/stock.json`, JSON.stringify(modifyProd.stock))
-      }
-    })
+
+function showMenu() {
+  document.querySelector("#menuContainer").style.display = "";
+  document.querySelector("#reservationContainer").style.display = "none";
+  document.querySelector("#winesContainer").style.display = "none";
 }
 
-async function saveChanges() {
-  var modifyProd = {};
-  modifyProd.name = document.querySelector('[name="nameEdit"]').value;
-  modifyProd.brand = document.querySelector('[name="brandEdit"]').value;
-  modifyProd.image = document.querySelector('[ name="imageEdit"]').value;
-  modifyProd.description = document.querySelector('[ name="descriptionEdit"]').value;
-  modifyProd.price = document.querySelector('[ name="priceEdit"]').value;
-  modifyProd.stock = document.querySelector('[ name="stockEdit"]').value;
-  await getCart(idxEdit, modifyProd); 
-  await ajax("PUT", `https://proiectfinal-c3768.firebaseio.com/products/${idxEdit}.json`, JSON.stringify(modifyProd))
-  await getListaProduse();
-  showTable();
-  editIdx = null;
+function showReservation() {
+  document.querySelector("#menuContainer").style.display = "none";
+  document.querySelector("#reservationContainer").style.display = "";
+  document.querySelector("#winesContainer").style.display = "none";
+}
+
+function showWines() {
+  document.querySelector("#menuContainer").style.display = "none";
+  document.querySelector("#reservationContainer").style.display = "none";
+  document.querySelector("#winesContainer").style.display = "";
+}
+
+// filter
+function filter() {
+
+  var obj = JSON.parse("GET", "https://restaurant-80efb.firebaseio.com/dishes.json")
+category.sort()
 }

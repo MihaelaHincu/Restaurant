@@ -24,10 +24,10 @@
 
 <!-- loader end -->
 
-<body>
+<body onload="getListaProduse(); hidden()">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
-                viewBox="0 0 172 172" style=" fill:#000000;">
+        <a class="navbar-brand" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                height="50" viewBox="0 0 172 172" style=" fill:#000000;">
                 <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                     stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                     font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -58,11 +58,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link bgcolor" href="../index.html#about">About us <span class="sr-only">(current)</span></a>
+                    <a class="nav-link bgcolor" href="../index.html#about">About us <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bgcolor" href="../menu/index.html"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                            width="30" height="30" viewBox="0 0 172 172" style=" fill:#000000;">
+                    <a class="nav-link bgcolor" href="../menu/index.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#000000;">
                             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                                 font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -87,8 +88,9 @@
                         Restaurant
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item bgcolor" href="../reserve/index.html">Reservation <svg xmlns="http://www.w3.org/2000/svg"
-                                x="0px" y="0px" width="50" height="30" viewBox="0 0 172 172" style=" fill:#000000;">
+                        <a class="dropdown-item bgcolor" href="../reserve/index.html">Reservation <svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="30"
+                                viewBox="0 0 172 172" style=" fill:#000000;">
                                 <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                                     stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
                                     stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
@@ -134,55 +136,73 @@
     </nav>
 
 
-
-
-
-
-
-
-
-
-
-    <div class="main" style="margin-top:150px;">
+    <div class="main container" style="margin-top:150px; text-align: center ">
         <h1>Welcome Admin</h1>
-        <button>Menu</button>
-        <button>Reservations</button>
-
-
-        <div id="reserveContainer" class="container top-bottom ">
-            <table id="products" border="1">
+        <button class="button" onclick="showMenu()">Menu</button>
+        <button class="button" onclick="showReservation()">Reservations</button>
+        <button class="button" onclick="showWines()">Wine</button>
+    </div>
+        <!-- ========================= MENU ========================= -->
+        <div id="menuContainer" class="container top-bottom">
+            <table class="" id="products" border="3">
                 <thead>
                     <tr>
-                        <th style="width:20%; text-align: center ">Image</th>
-                        <th style="width:20%; text-align: center">Name</th>
-                        <th style="width:20%; text-align: center">Ingredients</th>
-                        <th style="width:20%; text-align: center">Description</th>
-                        <th style="width:20%; text-align: center">Price</th>
-                        <th style="width:60px; text-align: center">Options</th>
+                        <th>Image</th>
+                        <th onclick="filter()">Category</th>
+                        <th>Name</th>
+                        <th>Ingredients</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Options</th>
                     </tr>
                 </thead>
                 <tbody>
 
                 </tbody>
-            </table>
 
-            <table id="products" border="1">
+            </table>
+        </div>
+        <!-- ========================= WINE ========================= -->
+        <div id="winesContainer" class="container top-bottom">
+            <table border="1">
                 <thead>
                     <tr>
-                        <th style="width:10%; text-align: center">Date</th>
-                        <th style="width:10%; text-align: center">Name</th>
-                        <th style="width:20%; text-align: center">Contact</th>
-                        <th style="width:20%; text-align: center">Guests</th>
-                        <th style="width:10%; text-align: center">Description</th>
-                        <th style="width:60px; text-align: center">Options</th>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Ingredients</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Options</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="wine">
 
                 </tbody>
             </table>
         </div>
-    </div>
+        <!-- ========================= RESERVE ========================= -->
+        <div id="reservationContainer" class="container top-bottom">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Date</th>
+                        <th style="width:10%;">Name</th>
+                        <th style="width:20%;">Contact</th>
+                        <th style="width:20%;">Guests</th>
+                        <th style="width:30%;">Description</th>
+                        <th style="width:40px;">Options</th>
+                    </tr>
+                </thead>
+                <tbody class="reservation">
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+   
 
 
     <!-- Optional JavaScript -->
