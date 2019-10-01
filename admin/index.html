@@ -141,69 +141,251 @@
         <button class="button" onclick="showMenu()">Menu</button>
         <button class="button" onclick="showReservation()">Reservations</button>
         <button class="button" onclick="showWines()">Wine</button>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                ADD
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" id="ddMenu" type="button" onclick="showMenuForm()">Menu</button>
+                <button class="dropdown-item" id="ddWine" type="button" onclick="showWineForm()">Wine</button>
+            </div>
+        </div>
     </div>
-        <!-- ========================= MENU ========================= -->
-        <div id="menuContainer" class="container top-bottom">
-            <table class="" id="products" border="3">
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th onclick="filter()">Category</th>
-                        <th>Name</th>
-                        <th>Ingredients</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Options</th>
-                    </tr>
-                </thead>
-                <tbody>
 
-                </tbody>
+    <!-- ========================= MENU ========================= -->
+    <div id="menuContainer" class="container top-bottom">
+        <table class="" id="products" border="3">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th onclick="filter()">Category</th>
+                    <th>Name</th>
+                    <th>Ingredients</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
 
-            </table>
+            </tbody>
+
+        </table>
+    </div>
+    <!-- ========================= WINE ========================= -->
+    <div id="winesContainer" class="container top-bottom">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Ingredients</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody class="wine">
+
+            </tbody>
+        </table>
+    </div>
+    <!-- ========================= RESERVE ========================= -->
+    <div id="reservationContainer" class="container top-bottom">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th style="width:10%;">Date</th>
+                    <th style="width:10%;">Name</th>
+                    <th style="width:20%;">Contact</th>
+                    <th style="width:20%;">Guests</th>
+                    <th style="width:30%;">Description</th>
+                    <th style="width:40px;">Options</th>
+                </tr>
+            </thead>
+            <tbody class="reservation">
+
+            </tbody>
+        </table>
+    </div>
+    <!-- ========================= ADD-wine ========================= -->
+    <form id="wineform" onsubmit="addWine()">
+        <hr> <label>
+            <h3 class="float-left test"> Name: </h3><br> <textarea class="form-control" name="Wine-name" required
+                style="width: 300px" rows="1"></textarea>
+        </label>
+
+        <br>
+        <hr>
+        <hr>
+        <label style="margin-right: 50px">
+            <h3 class="float-left test"> Category: </h3> <br> <select class="form-control" name="Wine-category"
+                id="exampleFormControlSelect1" style="margin-right: 50px">
+                <option>white</option>
+                <option>rose</option>
+                <option>red</option>
+            </select>
+        </label>
+
+        <label>
+            <h3 class="float-left test"> Price: </h3><br> <input class="form-control" name="Wine-price" type="number"
+                min="1" style="width: 100px" rows="1" required>
+        </label> <br>
+        <hr>
+        <hr>
+        <label>
+            <h3 class="float-left test"> Description: </h3><br> <textarea class="form-control" name="Wine-description"
+                required style="width: 300px; margin-right: 50px" rows="5"></textarea>
+        </label><label>
+            <h3 class="float-left test"> Ingredients: </h3> <br><textarea class="form-control" name="Wine-ingredients"
+                required style="width: 300px" rows="5"> </textarea>
+        </label><br>
+        <hr>
+        <br>
+        <div style="float:left;">
+
+            <input type="submit" value="Add" class="btn btn-secondary" style="margin-left:40px;">
         </div>
-        <!-- ========================= WINE ========================= -->
-        <div id="winesContainer" class="container top-bottom">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Name</th>
-                        <th>Ingredients</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Options</th>
-                    </tr>
-                </thead>
-                <tbody class="wine">
-
-                </tbody>
-            </table>
-        </div>
-        <!-- ========================= RESERVE ========================= -->
-        <div id="reservationContainer" class="container top-bottom">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th style="width:10%;">Date</th>
-                        <th style="width:10%;">Name</th>
-                        <th style="width:20%;">Contact</th>
-                        <th style="width:20%;">Guests</th>
-                        <th style="width:30%;">Description</th>
-                        <th style="width:40px;">Options</th>
-                    </tr>
-                </thead>
-                <tbody class="reservation">
-
-                </tbody>
-            </table>
         </div>
 
 
+    </form>
+
+    <!-- ========================= ADD-menu ========================= -->
+    <form id="menuform" onsubmit="addDish()">
+        <hr>
+        <label>
+            <h3 class="float-left "> Name: </h3>
+            <br>
+            <textarea class="form-control" name="Menu-name" style="width: 300px" rows="1" required></textarea>
+        </label>
+
+        <br>
+        <hr>
+        <hr>
+
+        <label>
+            <h3 class="float-left "> Image: </h3>
+            <br>
+            <input class="form-control" type="text" name="Menu-image" required>
+        </label>
+
+        <label>
+            <h3 class="float-left"> Category: </h3>
+            <br>
+            <select name="Menu-category" class="form-control" id="exampleFormControlSelect1" style="margin-right: 50px">
+                <option>fish</option>
+                <option>meat</option>
+                <option>pasta</option>
+                <option>desert</option>
+                <option>garnish</option>
+            </select>
+        </label>
+
+        <label>
+            <h3 class="float-left"> Price: </h3>
+            <br>
+            <input class="form-control" name="Menu-price" type="number" min="1" style="width: 100px" rows="1" required>
+        </label>
+
+        <br>
+        <hr>
+        <hr>
+
+        <label>
+            <h3 class="float-left"> Description: </h3>
+            <br>
+            <textarea class="form-control" name="Menu-description" style="width: 300px; margin-right: 50px" rows="5"
+                required></textarea>
+        </label>
+
+        <label>
+            <h3 class="float-left test"> Ingredients: </h3>
+            <br>
+            <textarea class="form-control" name="Menu-ingredients" style="width: 300px" rows="5" required> </textarea>
+        </label>
+
+        <br>
+        <hr>
+        <br>
+
+        <div style="margin: auto;">
+            <input type="submit" class="btn btn-secondary" value="Add">
+        </div>
 
 
-   
+    </form>
 
+
+    <div id="editDish" style="display:none; vertical-align:middle;">
+        <div class="editing-products-container">
+          <div class="">
+            Editare produs: <span id="productName"></span>
+          </div>
+          <div>
+            <form onsubmit="event.preventDefault()">
+              <hr>         
+              <label>
+                <h3 class="float-left "> Name: </h3>
+                <br>
+                <textarea class="form-control" name="EditMenu-name" style="width: 300px" rows="1" required></textarea>
+            </label>
+    
+            <br>
+            <hr>
+            <hr>
+    
+            <label>
+                <h3 class="float-left "> Image: </h3>
+                <br>
+                <input class="form-control" type="text" name="EditMenu-image" required>
+            </label>
+    
+            <label>
+                <h3 class="float-left"> Category: </h3>
+                <br>
+                <select name="EditMenu-category" class="form-control" id="exampleFormControlSelect1" style="margin-right: 50px">
+                    <option>fish</option>
+                    <option>meat</option>
+                    <option>pasta</option>
+                    <option>desert</option>
+                    <option>garnish</option>
+                </select>
+            </label>
+    
+            <label>
+                <h3 class="float-left"> Price: </h3>
+                <br>
+                <input class="form-control" name="EditMenu-price" type="number" min="1" style="width: 100px" rows="1" required>
+            </label>
+    
+            <br>
+            <hr>
+            <hr>
+    
+            <label>
+                <h3 class="float-left"> Description: </h3>
+                <br>
+                <textarea class="form-control" name="EditMenu-description" style="width: 300px; margin-right: 50px" rows="5"
+                    required></textarea>
+            </label>
+    
+            <label>
+                <h3 class="float-left test"> Ingredients: </h3>
+                <br>
+                <textarea class="form-control" name="EditMenu-ingredients" style="width: 300px" rows="5" required> </textarea>
+            </label>
+    
+            <br>
+            <hr>
+            <br>
+              <input type="submit" value="Save" onclick="saveMenuChanges()">
+              <input type="button" value="Cancel" onclick="showMenu();">
+            </form>
+          </div>
+        </div>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

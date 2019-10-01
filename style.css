@@ -1,76 +1,121 @@
-.carousel-caption {
-    margin-bottom: 20%;
-    font-family: 'Italianno', cursive;
-    text-shadow: 2px 2px black;
-}
-
-.carousel-caption h3 {
-    font-size: 60px;
-}
-
-.carousel-caption button {
-    font-size: 30px;
-    width: 120px;
-    height: 60px;
-    background-color: black;
-    margin-left: 10px;
-}
-
-.carousel-caption a:hover {
-    text-decoration: none;
-}
-
 body, html {
-    font-family: 'Muli';
     height: 100%;
     margin: 0;
-    background-image: url('dark-wood.jpg')
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/background%2Fdark-wood.jpg?alt=media&token=dceec8c4-e983-4d01-b44c-07ae6c665684');
+    font-family: 'Muli';
 }
 
-.icons {
-    height: 25px;
+*, ::after, ::before {
+    box-sizing: border-box;
 }
 
-.navbar {
-   background-color: rgba(31, 32, 32, 0.637);
-    border-radius: 2px;
-    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.4);
-    padding: 0 10px;
+
+/*  =========== NAVBAR END  =========== */
+
+/* =========== MAIN PAGE  =========== */
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    height: 100%!important;
+}
+
+.logo2 {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/output-onlinejpgtools%20(1).png?alt=media&token=701e2291-171a-4f53-9a87-dd7327956b14');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
     position: absolute;
-    width:100%;
-    top: 0;
-    left: 0;
-    z-index: 99999;
+    z-index: 2;
+    top: 42%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
 }
 
-a.bgcolor:hover {
-    background-color: #b64848;
-
-    border-radius: 12px;
-    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
-    color: #222;
+.program {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    z-index: 2;
+    top: 53%;
+    transform: translateY(-50%);
+    text-align: center;
 }
 
-a {
-    color:white!important;
+.wrapper p {
+    font-family: Muli;
+    z-index: 5;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 4px 4px rgb(63, 48, 29);
+    font-size: 20px;
 }
-a.dropdown-item {
-    color:black!important;
+
+video::-webkit-media-controls {
+    display: none !important;
 }
-.margin-top {
-    margin-top: 50px;
+
+.rectangle {
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 3, 3, 0.295);
+    margin: 3px 0 0 30px;
+    position: absolute;
+    margin-left: 0%;
+    z-index: 2;
+    top: 0%;
 }
+
+.diamond {
+    width: 280px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.651);
+    margin: 3px 0 0 30px;
+    position: absolute;
+    margin-left: 50%;
+    top: -50px;
+    z-index: 2;
+    top: 40%;
+    /* Rotate */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+/* =========== MAIN PAGE END =========== */
+
+/* =========== PAGE 2 =========== */
 
 .information-wrapper {
-    padding:70px;
+  text-align: center;
+    padding: 70px;
     overflow: hidden;
-    background-image: url('menu/extra_clean_paper.png');
-    border-radius:12px;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/background%2Fextra_clean_paper.png?alt=media&token=2d8c9a53-d2bf-4339-9316-8c023dccd612');
+    border-radius: 12px;
     margin-bottom: -100px;
     position: relative;
 }
 
-img {
+.carousel-item img {
     max-width: 100%;
     height: auto;
 }
@@ -80,30 +125,29 @@ img {
 .alignbox-small {
     display: inline-block;
     width: 20%;
-    margin-left: 2%;
-    border: solid black;
+    margin: 2%;
+    border: solid rgba(182, 145, 96, 0.356);
+    padding: 20px;
 }
+
 .alignbox-big {
     display: inline-block;
-    width: 48%;
-    margin-left: 2%;
-    border: solid black;
+    width: 47%;
+    margin: 2%;
 }
+
 .alignbox-big2, .alignbox-big3 {
-    /* AICIAM RAMAS */
-    
     float: left;
     width: 45%;
-    margin-left: 5%;
-  
-    
+    margin: 2%;
 }
-.alignbox-big3 {
-margin-top:50px;
 
+.alignbox-big3 {
+    margin-top: 50px;
 }
+
 .alignbox-big3 p {
-margin-top:50px;
+    margin-top: 50px;
     font-size: 30px;
     letter-spacing: 0.05em;
     text-align: center;
@@ -115,6 +159,7 @@ margin-top:50px;
 h4 {
     overflow: hidden;
     text-align: center;
+    line-height: 1.2;
 }
 
 h4:before, h4:after {
@@ -141,32 +186,37 @@ h4:after {
 
 /* button */
 
-.button {
-    border-radius: 4px;
-    background-color: #c4424279;
-    border: none;
+button {
+    
+    border: 2px;
+    border-radius: 5px;
+    margin: 2px;
+    width: 180px;
+    height: 50px;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
     color: #FFFFFF;
+    background-color: #DDAE71;
     text-align: center;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
-    margin-left: 40%;
+    transition: all 0.3s !important;
 }
 
-.button:hover, .button2:hover  {
-    background-color: #7495d379;
+button:hover {
+    background-color: rgb(182, 145, 96);
+    color: white;
+    box-shadow: inset 0px -80px 0px rgb(182, 145, 96);
 }
 
-.button span, .button2  {
+button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-.button span:after {
+button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -175,11 +225,11 @@ h4:after {
     transition: 0.5s;
 }
 
-.button:hover span  {
+button:hover span {
     padding-right: 25px;
 }
 
-.button:hover span:after  {
+button:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -189,41 +239,61 @@ h4:after {
 }
 
 .top-bottom {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-
-
-
-
-.button2 {
-    border-radius: 4px;
-    background-color: #c4424279;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
+.italicColor {
+    color: rgb(24, 70, 138);
 }
-/* HERO IMAGE */
 
+@media only screen and (max-width: 1200px) {
+    .alignbox-small {
+        display: inline-block;
+        width: auto;
+        margin: 2%;
+        border: solid black;
+        padding: 20px;
+    }
+    .alignbox-big {
+        display: inline-block;
+        width: auto;
+        margin: 2%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .alignbox-big2, .alignbox-big3 {
+        float: left;
+        width: auto;
+        margin: 2%;
+    }
+    .alignbox-big3 {
+        width: 100%;
+        text-align: center;
+    }
+    .alignbox-big3 p {
+        margin: 2%;
+        font-size: 30px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+    }
+}
+
+/* =========== PAGE 2 END =========== */
+
+
+
+/* =========== hero-image =========== */
 .hero-image {
-
-    background-image: linear-gradient(rgba(165, 165, 165, 0.459), rgba(0, 0, 0, 0.5)), url("wine.jpg");
-    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/wine4.jpg?alt=media&token=19f086b2-2b1d-4284-acb8-f2491c91241b");
+    height: 540px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
-
-.hero-text h4 {
-    font-family: Italianno;
-    font-size: 50px;
+    width: 100%;
 }
 
 .hero-text {
@@ -234,113 +304,62 @@ h4:after {
     transform: translate(-50%, -50%);
     color: white;
 }
+.hero-image button {
 
-.hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
-    text-align: center;
-    cursor: pointer;
+    background-color: rgb(95, 30, 30);
+
 }
 
-.hero-text button:hover {
-    background-color: #555;
+.hero-image button:hover {
+    background-color: #6E2D35;
+    box-shadow: inset 0px -80px 0px #6E2D35;
+}
+
+
+@media only screen and (max-width:660px) {
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/wine4.jpg?alt=media&token=19f086b2-2b1d-4284-acb8-f2491c91241b");
+        height: 380px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* =========== hero-image END =========== */
+
+
+
+.blockquote-custom {
+    position: relative;
+    font-size: 1.1rem;
+  }
+  
+  .blockquote-custom-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: 50px;
+    font-size:40px;
+  }
+  .blockquote-custom img {
+    width: 30px;
+  }
+
+
+  h3 {
     color: white;
+    text-align:center;
+  }
+
+
+.blockquote {
+  margin-top:30px;
 }
-
-/* HERO IMG END */
-
-/* responsive */
-
-@media screen and (min-width:936px) {
-    .alignbox-small, .alignbox-big {
-        display: inline-block;
-        width: auto;
-        float: none;
-        margin-right: 0px;
-        background-color: white;
-        border: solid black;
-    }
-
-
-    p {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    button {
-        display: inline-block;
-        margin-left: 20%;
-        margin-top: 10px;
-        width: 140px;
-    }
-}
-
-/* @media all and (max-width: 736px) {
-    .alignbox {
-        display: inline-block;
-        width: auto;
-        margin-right: 0px;
-        background-color: white;
-        border: solid black;
-    }
-    .button {
-        border-radius: 4px;
-        background-color: #c4424279;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        padding: 20px;
-        width: 200px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-        margin-left: 40%;
-    }
-    .carousel-caption button {
-        font-size: 30px;
-        width: 120px;
-        margin-left: 10px;
-    }
-} */
-
-
-/* .alignbox {
-    display: inline-block;
-    width: 30%;
-    margin-right: 2%;
-    background-color: white;
-    border: solid black;
-}
-.button {
-    border-radius: 4px;
-    background-color: #c4424279;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-left: 40%;
-}
-.carousel-caption button {
-    font-size: 30px;
-    width: 120px;
-    margin-left: 10px;
-} */
-/* 
-@media all and (max-width: 1199px) { ... } 
-@media all and (max-width: 991px) { ... } 
-@media all and (max-width: 768px) { ... } 
-@media all and (max-width: 575px) { ... } */
-
-
-
-/* loader */
-
-

@@ -53,7 +53,7 @@ function draw() {
       <div><p>${list[i].description}</p></div>
       <div class="details">
         <div><strong> Price: ${list[i].price} lei</strong></div>
-       <button> <a href="detalii/detalii.html?dishes=${i}">See more</a </button>
+        <a href="detalii/detalii.html?dishes=${i}"> <button class="btn"> More</button> </a>
       </div>
     </div>
   `;

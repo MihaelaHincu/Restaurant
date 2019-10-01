@@ -2,52 +2,11 @@ body, html {
     font-family: 'Muli';
     height: 100%;
     margin: 0;
-    background-image: url('../dark-wood.jpg')
+    background-image:url('https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/background%2Fdark-wood.jpg?alt=media&token=dceec8c4-e983-4d01-b44c-07ae6c665684');
+ 
     
 }
 
-.icons {
-    height: 25px;
-}
-
-.navbar {
-    background-color: rgba(31, 32, 32, 0.637);
-    border-radius: 2px;
-    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.4);
-    padding: 0 10px;
-    position: absolute;
-    width:100%;
-    
-    top: 0;
-    left: 0;
-    z-index: 99999;
-}
-
-a.bgcolor:hover {
-    background-color: #b64848;
-
-    border-radius: 12px;
-    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
-    color: #222;
-}
-
-a {
-    color:white!important;
-}
-a.dropdown-item {
-    color:black!important;
-}
-.margin-top {
-    margin-top: 50px;
-}
-
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* align */
 .information {
     text-align:center;
 }
@@ -59,19 +18,7 @@ img {
     line-height: 1.6;
     font-family: 'Niconne'
 }
-.alignbox-small {
-    display: inline-block;
-    width: 20%;
-    margin-left: 2%;
-    border: solid black;
-}
-.alignbox-big {
-    display: inline-block;
-    width: 47%;
-    height: 250px;
-    margin-left: 2%;
-    border: solid black;
-}
+
 
 #sortingBtns {
     text-align: center;
@@ -84,23 +31,7 @@ img {
     text-shadow: 1px 1px black;
 
 }
-.alignbox-big2 {
-    display: inline-block;
-    width: 40%;
-    padding:100px;
-    
-    margin-left: 2%;
-    border: solid black;
 
-}
-
-.alignbox-big2 p {
-
-    font-size: 30px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-}
 
 
 
@@ -108,15 +39,12 @@ img {
 /* wrapper */
 #reserveContainer {
     padding:70px;
-    background-image: url('../menu/extra_clean_paper.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/background%2Fextra_clean_paper.png?alt=media&token=2d8c9a53-d2bf-4339-9316-8c023dccd612');
     border-radius:12px;
 }
 /* hr */
 
-h4 {
-    overflow: hidden;
-    text-align: center;
-}
+
 
 h4:before, h4:after {
     background-color: #000;
@@ -138,23 +66,9 @@ h4:after {
     margin-right: -50%;
 }
 
-h5 {
-    color: rgb(94, 14, 14);
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-    font-family: 'Niconne', cursive;
-
-    font-size: 30px;
-}
 /* hr end */
 
 /* button */
-
-
-
-
-.hidden {
-    display: none;
-}
 
 .top-bottom {
     margin-top: 120px;
@@ -164,19 +78,18 @@ h5 {
 /* HERO IMAGE */
 
 .hero-image {
-    background-image: linear-gradient(rgba(165, 165, 165, 0.459), rgba(0, 0, 0, 0.5)), url("background.jpg");
-    height: 50%;
+    background-image: linear-gradient(rgba(165, 165, 165, 0.459), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/background.jpg?alt=media&token=337ba970-2056-43fb-abf5-f947aa570e62");
+    height: 540px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
+    width: 100%;
+    margin-top:5%;
+    }
 
-.hero-text h4 {
-    font-family: Italianno;
-    font-size: 50px;
-    text-shadow: 2px 0px black;
-}
+
+
 
 .hero-text {
     text-align: center;
@@ -190,40 +103,28 @@ h5 {
 
 }
 
-.hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s;
-    border-radius: 4px;
-}
 
 .hero-text button:hover {
     background-color: #555;
     color: white;
 }
 
-/* HERO IMG END */
-/* CARDS JSON */
-h5 {
+
+  .hero-text h4 {
+    font-family: "Italianno";
+    font-size: 50px;
+    text-shadow: 2px 0px black;
+    overflow: hidden;
     text-align: center;
+}
+a {
+    text-decoration: none;
+    color:black;
 }
 /* responsive */
 
 @media screen and (max-width:991px) {
-    .alignbox-big {
-        display: inline-block;
-        width: auto;
-        float: none;
-        margin-right: 0px;
-        background-color: white;
-        border: solid black;
-    }
+
     p {
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -240,15 +141,7 @@ h5 {
 }
 
 @media all and (max-width: 768px) {
-    .alignbox-big {
-        display: inline-block;
-        width: auto;
-        height: auto;
-        float: none;
-        margin-right: 0px;
-        background-color: white;
-        border: solid black;
-    }
+
     .tableBtn {
         border: none;
         outline: 0;
@@ -264,53 +157,6 @@ h5 {
     }
 }
 
-
-/* .alignbox {
-    display: inline-block;
-    width: 30%;
-    margin-right: 2%;
-    background-color: white;
-    border: solid black;
-}
-.button {
-    border-radius: 4px;
-    background-color: #c4424279;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-left: 40%;
-}
-.carousel-caption button {
-    font-size: 30px;
-    width: 120px;
-    margin-left: 10px;
-} */
-
-
-@media all and (max-width: 1199px) {
- } 
-@media all and (max-width: 991px) {  } 
-@media all and (max-width: 768px) { }
-@media all and (max-width: 575px) {}
-
-
-
-/* loader */
-
-
-.filterDiv {
-
-    display: none;
-  }
-  
-  .show {
-    display: inline-block;
-  }
   
   
   /* Style the buttons */
@@ -319,18 +165,11 @@ h5 {
     padding: 12px 16px;
     width:100px;
     color:white;
-    background-image: url('../dark-wood.jpg');
+    background-image:url('https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/background%2Fdark-wood.jpg?alt=media&token=dceec8c4-e983-4d01-b44c-07ae6c665684');
     cursor: pointer;
+    border:none;
   }
   
   .btn:hover {
     color:silver;
   }
-  
-  .btn.active {
-    background-image: url('extra_clean_paper.png');
-    color: rgb(46, 44, 44);
-    
-    border-right-color:  rgb(48, 2, 2);
-    border-left-color: rgb(48, 2, 2);
-  
