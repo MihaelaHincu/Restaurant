@@ -48,9 +48,9 @@ async function getListaWines() {
 
 
 async function getListaReservation() {
-  await ajax("GET", "https://restaurant-80efb.firebaseio.com/cart.json")
+  await ajax("GET", "https://restaurant-80efb.firebaseio.com/reservation.json")
     .then(function (answer) {
-      listaDishes = answer;
+      listaReservation = answer;
       drawReservation();
     })
 };
@@ -139,11 +139,11 @@ function drawReservation() {
     }
     str += `
       <tr>
-        <td class="date" ><span>${listaReservation[i].date}</span> </td>
+        <td class="date" ><span>${listaReservation[i].date}</span><br> <span>${listaReservation[i].hour}</span> </td>
         <td class="name" ><span>${listaReservation[i].name}</span></td>
-        <td class="contact"><span>${listaWines[i].contact}</span></td>
+        <td class="contact"><span>${listaReservation[i].phone}</span></td>
                   <td class="guests"><span>${listaReservation[i].guests}</span></td>
-                  <td class="description" ><span>${listaReservation[i].description}</span></td>
+                  <td class="details" ><span>${listaReservation[i].details}</span></td>
         <td style="white-space:nowrap;">
         <div  class="editBtn" onclick="edit('${i}');"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
         width="60" height="60"
@@ -160,8 +160,9 @@ function drawReservation() {
   }
 
   document.querySelector("table tbody.reservation").innerHTML = str;
-
+ 
 }
+
 
 // HIDE/SHOW TABLE
 function hidden() {
