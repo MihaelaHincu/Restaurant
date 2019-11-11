@@ -21,21 +21,21 @@ body, html {
 .alignbox-big {
     display: inline-block;
     width: 47%;
-    height: 260px;
+    height: auto;
     margin-left: 2%;
     margin-bottom: 20px;
     border: double rgba(146, 146, 13, 0.212);
     border-width: 5px;
 }
 
-.alignbox-big p, strong, button {
-    margin-left: 10px;
+.alignbox-big p, strong {
+    margin: 5%;
 }
 
 #sortingBtns {
     text-align: center;
-margin-left:auto;
-margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-shadow: 1px 1px black;
 }
 
@@ -74,7 +74,6 @@ h4:after {
     margin-right: -50%;
 }
 
-
 /* hr end */
 
 /* button */
@@ -83,7 +82,7 @@ button {
     border: 2px;
     border-radius: 5px;
     margin: 2px;
-    width: 180px;
+    width: auto;
     height: 50px;
     outline: 0;
     display: inline-block;
@@ -98,6 +97,19 @@ button {
 .tableBtn:hover {
     color: white;
     box-shadow: inset 0px -80px 0px rgb(199, 158, 111);
+}
+
+.tableBtn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
 }
 
 button span {
@@ -170,62 +182,49 @@ h5 {
 
 /* responsive */
 
-@media screen and (max-width:991px) {
+@media only screen and (min-width: 320px) and (max-width: 900px) {
     .alignbox-big {
-        display: inline-block;
-        width: 50%;
-        float: none;
-        margin-right: 0px;
-        padding:20px;
-        border: double rgba(146, 146, 13, 0.212);
-        border-width: 5px;
-    }
-    p {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    button {
-        display: inline-block;
-        margin-left: auto;
-        margin-top: 10px;
-        width: auto;
-    }
-}
-
-@media all and (max-width: 768px) {
-    .alignbox-big {
-        display: inline-block;
+        display: block;
         width: auto;
         height: auto;
-        float: none;
-        margin-right: 0px;
-        border: double rgba(146, 146, 13, 0.212);
-        border-width: 5px;
+        margin-left: 0%;
 
-
-        
     }
-    .tableBtn {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 10px 25px;
-        color: black;
-        background-color: #ddd;
+    .alignbox-big p, strong {
+        padding: 10px;
+    }
+    .alignbox-big .details {
         text-align: center;
-        cursor: pointer;
-        transition: all 0.5s;
-        border-radius: 4px;
+    }
+    #dishesContainer {
+        padding: 20px;
     }
     #sortingBtns {
         text-align: center;
-    margin-left:auto;
-    margin-right: auto;
+        margin: auto;
         text-shadow: 1px 1px black;
     }
-
 }
+
+@media only screen and (min-width: 901px) and (max-width: 2500px) {
+
+    .alignbox-big p, strong {
+        padding: 10px;
+    }
+    .alignbox-big .details {
+        text-align: center;
+    }
+    #dishesContainer {
+        padding: 15px;
+    
+    }
+    #sortingBtns {
+        text-align: center;
+        margin: auto;
+        text-shadow: 1px 1px black;
+    }
+}
+
 
 /* loader */
 

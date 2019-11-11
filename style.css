@@ -122,7 +122,7 @@ video::-webkit-media-controls {
         height: 180px;
     }
 }
-@media all and (min-width: 681px) and (max-width: 1000px){ 
+@media all and (min-width: 681px) and (max-width: 1100px){ 
         .logo2 {
         background-size: 260px;
     }
@@ -134,7 +134,7 @@ video::-webkit-media-controls {
         top: 50%;
     }
     .wrapper p {
-        font-size: 12px;
+        font-size: 11px;
     }
     .diamond {
         width: 190px;
@@ -142,26 +142,26 @@ video::-webkit-media-controls {
     }
 }
 
-/* @media all and (min-width: 1001px){
+@media all and (min-width: 1101px) and (max-width: 1500px){ 
     .logo2 {
-        background-size: 300px;
-    }
-    svg {
-        width:240px;
-         height:240px;
-    }  
-    .program {
-        top: 50%;
-    }
-    .wrapper p {
-        font-size: 16px;
-    }
-    .diamond {
-        width:240px;
-        height:240px;
-    }
-} */
+    background-size: 290px;
+}
+svg {
+    width:220px;
+     height:220px;
+}  
+.program {
+    top: 50%;
+}
+.wrapper p {
+    font-size: 14px;
+}
+.diamond {
+    width:220px;
+     height:220px;
+}
 
+}
 
 /* =========== MAIN PAGE END =========== */
 
@@ -248,7 +248,7 @@ h4:after {
 
 /* button */
 
-button {
+.information-wrapper button, .hero-image button {
     
     border: 2px;
     border-radius: 5px;
@@ -265,7 +265,7 @@ button {
     transition: all 0.3s !important;
 }
 
-button:hover {
+.information-wrapper button:hover {
     background-color: rgb(182, 145, 96);
     color: white;
     box-shadow: inset 0px -80px 0px rgb(182, 145, 96);
@@ -347,7 +347,7 @@ h4 {
         font-size:20px;
     }
 
-    button {
+  .information-wrapper  button {
     
         border: 1px;
         border-radius:5px;
@@ -396,14 +396,12 @@ h4 {
       margin:auto;
       height: auto;
   }
-  /* .alignbox-big3 {
-    height:190px;
-  } */
+
   .alignbox-big3 p{
 font-size: 20px;
 
   }
-  button {
+ .information-wrapper button {
     
     border: 1px;
     border-radius:5px;
