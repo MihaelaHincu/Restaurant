@@ -11,7 +11,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- css style -->
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../navbar.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli:400,700i|Italianno|Niconne&display=swap" rel="stylesheet">
     <title>Hello, world!</title>
@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-md  navbar">
         <a class="navbar-brand" href="../index.html">
             <div class="logo light">
-                <img  src="https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/logo.png?alt=media&token=e35d6b35-6381-45e9-b8a4-82949a8e8bc1"
+                <img src="https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/logo.png?alt=media&token=e35d6b35-6381-45e9-b8a4-82949a8e8bc1"
                     alt="" width="88">
             </div>
         </a>
@@ -42,7 +42,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link bgcolor" href="../index.html#about">About us <span class="sr-only">(current)</span></a>
+                    <a class="nav-link bgcolor" href="../index.html#about">About us <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link bgcolor" href="../menu/index.html"><img class="icons"
@@ -50,8 +51,8 @@
                             alt=""> Menu</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle bgcolor" href="../reserve/index.html" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle bgcolor" href="../reserve/index.html" id="navbarDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Restaurant
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -74,8 +75,8 @@
     <div class="hero-image">
         <div class="hero-text">
             <h4>Wine</h4>
-            <p>bla bla, bla bla bla bla bla bla bla.</p>
-           
+            <p>Lorem ipsum dolor sit amet elit.</p>
+
         </div>
     </div>
 
@@ -86,16 +87,17 @@
 
 
 
+    <div class="container top-bottom ">
+       
+        <div id="sortingBtns" class="">
 
-    <div id="sortingBtns" class="">
-        
-        <button class="btn" onclick="filterSelection('red')">Red</button>
-        <button class="btn" onclick="filterSelection('rose')">Rose</button>
-        <button class="btn" onclick="filterSelection('white')">White</button>
+            <button class="btn" onclick="filterSelection('red')">Red</button>
+            <button class="btn" onclick="filterSelection('rose')">Rose</button>
+            <button class="btn" onclick="filterSelection('white')">White</button>
 
+        </div>
+        <div id="dishesContainer"></div>
     </div>
-
-    <div id="dishesContainer" class="container top-bottom "></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

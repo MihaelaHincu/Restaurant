@@ -11,7 +11,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- css style -->
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../navbar.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli:400,700i|Italianno|Niconne&display=swap" rel="stylesheet">
     <title>Hello, world!</title>
@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-md  navbar">
         <a class="navbar-brand" href="../index.html">
             <div class="logo light">
-                <img  src="https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/logo.png?alt=media&token=e35d6b35-6381-45e9-b8a4-82949a8e8bc1"
+                <img src="https://firebasestorage.googleapis.com/v0/b/restaurant-80efb.appspot.com/o/logo.png?alt=media&token=e35d6b35-6381-45e9-b8a4-82949a8e8bc1"
                     alt="" width="88">
             </div>
         </a>
@@ -43,7 +43,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link bgcolor" href="../index.html#about">About us <span class="sr-only">(current)</span></a>
+                    <a class="nav-link bgcolor" href="../index.html#about">About us <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link bgcolor" href="#"><img class="icons"
@@ -86,19 +87,20 @@
 
 
 
-<div class="container top-bottom ">
+    <div class="container top-bottom ">
 
-    <div id="sortingBtns" > 
-        
-        <button class="btn" onclick="filterSelection('meat')">Meat</button>
-        <button class="btn" onclick="filterSelection('pasta')">Pasta</button>
-        <button class="btn" onclick="filterSelection('fish')">Fish</button>
-        <button class="btn" onclick="filterSelection('desert')">Desert</button>
-        <button class="btn" onclick="filterSelection('garnish')">Garnish</button>
-        
+        <div id="sortingBtns">
+
+            <button class="btn" onclick="filterSelection('meat')">Meat</button>
+            <button class="btn" onclick="filterSelection('pasta')">Pasta</button>
+            <button class="btn" onclick="filterSelection('fish')">Fish</button>
+            <button class="btn" onclick="filterSelection('desert')">Desert</button>
+            <button class="btn" onclick="filterSelection('garnish')">Garnish</button>
+
+        </div>
+
+        <div id="dishesContainer"></div>
     </div>
-
-    <div id="dishesContainer" ></div> </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
